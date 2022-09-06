@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--importar archivos bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <!--importar el archivo css-->
+    <link rel="stylesheet" href="../Css/estilo.css">
+    <title>Cuenta</title>
+
+</head>
+
+<body>
+    <!--Encabezado-->
+    <!-- container-fluid es una clase que indica el porcentaje que se vera el titulo a diferentes resoluciones-->
+    <!--bg-success es para indicar el color de la barra de la cabezera, en este caso sera verde-->
+    <!--d-flex para  ajustar el diseño, la alineación y el tamaño de las columnas, para que quede en un modelo responsive -->
+    <!--justify-content-center, para que el titulo quede justificado en el centro-->
+    <header class="container-fluid bg-success d-flex justify-content-center">
+        <!--p-2 indica un padding 2; fs-2, es para indicar el tamaño de la letra -->
+        <p class=" p-2 fs-1">Nombre de la empresa</p>
+    </header>
+    
+    <!--Creación de la barra de menú-->
+    <nav class="navbar navbar-expand-lg bg-light p-3 " id="menu"> <!--expand-lg: large, en los cuales se hace responsive cuando la resolución es menor a 992px-->
+        <div class="container-fluid">
+          <a class="navbar-brand fw-bold" href="../html/1-1index.html">Inicio</a>
+          
+          <!--Para que el menu colapse cuando sea responsive, el tipo del icono del menu-->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="../html/2compras.html"> <span fw-bold>Mis Compras</span> </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../html/7cuenta.html"> <span>Cuenta</span> </a>
+              </li>
+
+              <!--Creación del menu despegable-->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Menú
+                </a>
+
+                <!--items que contendra el dropdown o mini menu despedable -->
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="../html/3frutas.html"> <span>Frutas</span> </a></li>
+                  <li><a class="dropdown-item" href="../html/4verduras&hortalizas.html"> <span>Verduras y Hortalizas</span> </a></li>
+                  <li><a class="dropdown-item" href="../html/5pulpas.html"> <span>Pulpas</span> </a></li>
+                  <li><a class="dropdown-item" href="../html/6hierbasAromaticas.html"> <span>Hierbas y Aromaticas</span> </a></li>
+                </ul>
+              </li>
+            </ul>
+
+            <!--Creación de la barra de busqueda-->
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="¿Qué buscas?" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Buscar</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+    <!---------------------Creación del formulario--------------------------------------->
+    <div class="d-flex justify-content-center ">
+        <div class="card col-sm-6-5 p-3 "> <!--Card es para encerrar todo este div y aparezca un cuadrado; padding 3; sm: responsive margin mayor a 576px -->
+            <div > <h2>Registro</h2>  </div>
+            
+            <div>
+                <form action="">
+                    <!--Formulario para crear el usuario-->
+                    <div>
+                        <!--Para la barra del nombre-->
+                        <label for="nombre">Nombre</label>
+                        <!--form.control es para hacer que la barra para escribir el nombre aparezca abajo-->
+                        <input type="text" id="nombre" placeholder="Nombres" class="form-control"></form> 
+                    </div>
+
+                    <div>
+                        <!--Para la barra del apellido-->
+                        <label for="nombre">Apellido</label>
+                        <input type="text" id="nombre" placeholder="Apellidos Completos" class="form-control"></form>
+                    </div>
+
+                    <div>
+                        <!--Para la barra del correo-->
+                        <label for="nombre">Correo</label>
+                        <input type="text" id="nombre" placeholder="Correo electrónico" class="form-control"></form>
+                    </div>
+                    
+                    <div>
+                        <!--Para la barra el número celular-->
+                        <label for="nombre">Número celular</label>
+                        <input type="text" id="nombre" placeholder="+57 " class="form-control"></form>
+                    </div>
+
+                    <div>
+                        <!--Para la barra de la contraseña-->
+                        <label for="nombre">Contraseña</label>
+                        <input type="text" id="nombre" placeholder="8 dígitos" class="form-control"></form>
+                    </div>
+                    <div>
+                        <!--Para la barra de la contraseña-->
+                        <label for="nombre">Repetir Contraseña</label>
+                        <input type="text" id="nombre" placeholder="8 dígitos" class="form-control"></form>
+                    </div>
+
+                    <!--Creación del botón enviar-->
+                    <div class="mb-2">
+                        <button class="btn btn-outline-success">Enviar</button>
+                    </div>
+                </form>
+                
+            </div>
+
+            
+            
+        </div>
+
+    </div>
+
+    <!--opción 1: boostrap bundle with popper, sin esto el menu despegable no funciona-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+
+    <footer>
+      <p> Número de contacto es: pbx 31585-589-874 <br>
+            Corre electronico: Emprendimiento@stard.co <br>
+            Dirección: Calle falsa 123
+      </p>
+        
+    </footer> 
+</footer>    
+</body>
+</html>

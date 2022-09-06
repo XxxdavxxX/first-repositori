@@ -1,0 +1,55 @@
+/*Cargar las fuentes*/
+@charset "UTF-8";
+
+@font-face{
+    font-family: lobster;
+    src: url('../Fuente/IndieFlower-Regular.ttf');
+}
+
+
+/*-----------------------------------------------------------------------------------------*/
+/*modificar el header*/
+
+
+/*modificar el body*/
+
+body {
+    overflow: hidden; /*no se dibujan barras*/
+    min-height: 100%;
+}
+
+#menu a {
+    font-size: 26px; /*tamaño de la letra 18 pixeles para el menú*/
+    font-family: lobster;
+}
+
+/*-----------------------------------------------------------------------------------------*/
+/*modificar el footer*/
+footer{
+    
+    background-color: rgb(61, 100, 22);
+    padding-left: 10px;
+    font-size: 14px;
+    margin: 0px;
+    bottom: 0;
+    width: 100%;
+    vertical-align: center;
+    position: absolute;
+}
+
+/*-----------------------------------------------------------------------------------------*/
+/*------------------------------------Modificar items de Carousel-------------------------*/
+
+
+/*delimitar el tamaño de la imagen -- slider imagen*/
+.carousel-inner{
+    padding: 10px;
+    max-height: 39rem;
+}
+
+
+/*centrar el texto del Carousel*/
+.text{
+    text-align: center;
+}
+
